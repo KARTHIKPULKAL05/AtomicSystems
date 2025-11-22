@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Atomic Systems Builder</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Nunito', 'sans-serif'],
+            },
+            colors: {
+              brand: {
+                50: '#f0f9ff',
+                100: '#e0f2fe',
+                400: '#38bdf8',
+                500: '#0ea5e9', // Sky blue (Duolingo-ish primary)
+                600: '#0284c7',
+                700: '#0369a1',
+                action: '#58cc02', // Duolingo Green
+                actionShadow: '#46a302',
+              }
+            },
+            boxShadow: {
+              'btn': '0px 4px 0px 0px rgba(0,0,0,0.1)', 
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+      body { background-color: #ffffff; }
+      .btn-press {
+        transition: all 0.1s;
+        border-bottom-width: 4px;
+      }
+      .btn-press:active {
+        border-bottom-width: 0px;
+        transform: translateY(4px);
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.30.0",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "react/": "https://aistudiocdn.com/react@^19.2.0/"
+  }
+}
+</script>
+</head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>
